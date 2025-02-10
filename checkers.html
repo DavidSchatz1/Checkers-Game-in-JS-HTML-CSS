@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkers game</title>
+  <link rel="stylesheet" href="C:\Users\משתמש\source\repos\JS-workshop\checkers\checkers.css">
+</head>
+<body>
+  <h1>Checkers Game</h1>
+  <div class="board" id="board"></div>
+   <div class="buttons">
+    <button id="drawButton" class="draw">Draw</button>
+    <div id="drawModal" class="modal">
+      <div class="modal-content">
+        <p id="drawMessage"></p> 
+        <div class="modal-buttons">
+            <button id="confirmDraw">Yes</button>
+            <button id="cancelDraw">No</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <button class="resignButton" id="resignButton">Resign</button>
+    <div id="resignModal" class="modal">
+      <div class="modal-content">
+        <p id="resignMessage">Are you sure you want to resign?</p>
+        <div class="modal-buttons">
+          <button id="confirmResign">Yes</button>
+          <button id="cancelResign">No</button>
+        </div>
+      </div>
+    </div>    
+   </div>
+  </div>
+   
+   <div class="turn-display">
+      <div class="one-turn-text blacktext" id="one-turn-text"> 
+       player one's turn 
+        </div> 
+        <p id="divider">|</p> 
+        <div class="two-turn-text graytext" id="two-turn-text"> 
+        player two's turn 
+      </div>
+    </div>
+
+  <script src="C:\Users\משתמש\source\repos\JS-workshop\checkers\checkers.js"></script>
+  
+</body>
+</html>

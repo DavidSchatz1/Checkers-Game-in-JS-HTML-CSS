@@ -1,0 +1,196 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.board{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: 4px solid black;
+  margin-bottom: 10px;
+  margin-bottom: 0px;
+  background-color: rgb(155, 153, 153);
+  /* height: 480px;
+  width: 480px; */
+}
+
+.cell{
+  width: 50px;
+  height: 50px;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blackcell{
+  background-color: rgb(90, 90, 90);
+}
+.whitecell{
+  background-color: rgb(164, 164, 164);
+}
+
+.black-piece {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    position: flex;
+}
+
+.white-piece {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(223, 223, 223);
+    position: flex;
+      
+}
+
+.king-white-piece {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(253, 255, 148);
+    position: flex;
+    z-index: 2;
+}
+.king-black-piece {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(96, 2, 96);
+    position: flex;
+    z-index: 2;
+}
+.selected-piece {
+  border: 3px solid yellow; 
+  border-radius: 50%;
+}
+.allowed-move {
+  box-shadow: inset 0 0 0 3px limegreen;
+  background-color: rgba(144, 238, 144, 0.3); 
+}
+
+.turn-display{
+  display: flex;
+  /* bottom: 0px;
+  margin-top: 50px; */
+  justify-content: center;
+  align-items: center;
+}
+.two-turn-text{
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.one-turn-text{
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+
+}
+.divider{
+  margin: 5px 5px;
+  padding: 20px;
+}
+.graytext{
+  color: gray;
+}
+.blacktext{
+  color: black;
+}
+h1{
+  text-align: center;
+  margin-top: 10px;
+}
+.draw{
+  margin: 10px;
+  font-size: 16px;
+  background-color: #f3ff4d86;
+  border-radius: 7%;
+}
+.resignButton{
+  margin: 10px;
+  font-size: 16px;
+  background-color: #ff484870;
+  border-radius: 7%;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.modal {
+  display: none; /* מוסתר כברירת מחדל */
+  position: fixed; /* נשאר במקום */
+  z-index: 3; /* מעל כולם */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* מאפשר גלילה אם התוכן ארוך */
+  background-color: rgba(0, 0, 0, 0.4); /* רקע שקוף */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefefe;
+  margin: 15% auto; /* מרכוז אנכי */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* רוחב */
+  max-width: 600px; /* רוחב מקסימלי */
+  text-align: center;
+}
+#drawMessage{
+  width: 100%;
+  
+}
+
+.modal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#confirmResign  {
+  background-color: #f44336; /* אדום */
+  color: white;
+}
+#confirmDraw
+{
+  background-color: #f44336; /* אדום */
+  color: white;
+}
+
+#cancelResign  {
+  background-color: #4CAF50; /* ירוק */
+  color: white;
+}
+#cancelDraw
+{
+  background-color: #4CAF50; /* ירוק */
+  color: white;
+}
